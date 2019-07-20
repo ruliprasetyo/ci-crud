@@ -36,7 +36,6 @@
 								<th scope="col">Name</th>
 								<th scope="col">Gender</th>
 								<th scope="col">Address</th>
-								<th scope="col">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -51,7 +50,6 @@
 									<td>$r->name</td>
 									<td>$r->gender</td>
 									<td>$r->address</td>
-									<td><a class='btn btn-sm btn-info'> #</a></td>
 									</tr>";
 									$no++;
 
