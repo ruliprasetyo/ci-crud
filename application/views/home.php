@@ -23,45 +23,20 @@
 		</div>
 	</nav>
 
-    <!-- area table mahasiswa -->
-	<div class="row">
-		<div class="container">
-			<div class="col-sm-12 col-md-12 col-lg-12">
-					<table class="table table-bordered table-striped">
-						<h2>Data Mahasiswa</h2>
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Nim</th>
-								<th scope="col">Name</th>
-								<th scope="col">Gender</th>
-								<th scope="col">Address</th>
-							</tr>
-						</thead>
-						<tbody>
-							
-								<?php 
-								$no=1;
-								foreach ($record->result() as $r) {
-									echo "
-									<tr>
-									<td>$no</td>
-									<td>$r->nim</td>
-									<td>$r->name</td>
-									<td>$r->gender</td>
-									<td>$r->address</td>
-									</tr>";
-									$no++;
-
-								}
-								?>
-							
-						</tbody>
-					</table>	
-			</div>
+	<!-- area jumbroton -->
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="display-4">Learn codeigniter</h1>
+			<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+			<hr class="my-4">
+			<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+			<p class="lead">
+				<a class="btn btn-primary btn-md" href="#" role="button">Lets learn !</a>
+			</p>
 		</div>
 	</div>
-	<!-- end area table mahasiswa -->
+
+	<!-- end area jumbroton -->
 
 	<script
 	src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -69,5 +44,6 @@
 	crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>
