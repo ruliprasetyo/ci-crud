@@ -17,4 +17,26 @@ class Mahasiswa extends CI_Controller
 		$data['record']=$this->M_mahasiswa->mahasiswa();
 		$this->load->view('v_mahasiswa',$data);
 	}
+
+	public function new()
+	{
+		if (isset($_POST['submit']))
+	    {
+			
+		}else
+		{
+			$this->load->view('v_new_mahasiswa');
+		}
+	}
+
+	public function edit()
+	{
+		if (isset($_POST['submit']))
+	    {
+			
+		}else
+		{
+			$this->load->view('v_edit_mahasiswa');
+		}
+	}
 }

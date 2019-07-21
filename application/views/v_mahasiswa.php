@@ -15,9 +15,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="home">Home</a>
-					<a class="nav-item nav-link" href="mahasiswa">Mahasiswa</a>
-					<a class="nav-item nav-link disabled" href="#">Disabled</a>
+					<a class="nav-item nav-link" href="http://localhost/ci-crud/index.php/mahasiswa">Mahasiswa</a>
 				</div>
 			</div>
 		</div>
@@ -27,8 +25,9 @@
 	<div class="row">
 		<div class="container">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-					<table class="table table-bordered table-striped">
+					<table class="table table-bordered table-striped mt-3">
 						<h2>Data Mahasiswa</h2>
+						<a href="http://localhost/ci-crud/index.php/mahasiswa/new" class="btn btn-sm btn-primary">Add new</a>
 						<thead>
 							<tr>
 								<th scope="col">#</th>
@@ -36,6 +35,7 @@
 								<th scope="col">Name</th>
 								<th scope="col">Gender</th>
 								<th scope="col">Address</th>
+								<th scope="col">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -50,6 +50,9 @@
 									<td>$r->name</td>
 									<td>$r->gender</td>
 									<td>$r->address</td>
+									<td>".anchor('mahasiswa/edit/'.$r->mahasiswa_id,'<i class="btn btn-sm btn-primary"> Edit</i>')."
+									    ".anchor('mahasiswa/delete/'.$r->mahasiswa_id,'<i class="btn btn-sm btn-danger"> Delete</i>')."
+									</td>
 									</tr>";
 									$no++;
 
