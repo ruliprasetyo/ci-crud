@@ -28,23 +28,25 @@
     		<div class="col-sm-12 col-md-12 col-lg-12">
     			<h3>Form update</h3>
     			<hr>
-    			<form>
+    			<?php echo form_open('mahasiswa/edit'); ?>
+                   <input type="text" name="mahasiswa_id" value="<?php echo $record['mahasiswa_id']?>" hidden>
     				<div class="form-group row">
     					<label class="col-sm-2 col-form-label">Nim</label>
     					<div class="col-sm-10">
-    						<input type="text" name="name" class="form-control">
+    						<input type="text" name="nim" value="<?php echo $record['nim'] ?>" class="form-control">
     					</div>
     				</div>
     				<div class="form-group row">
     					<label class="col-sm-2 col-form-label">Name</label>
     					<div class="col-sm-10">
-    						<input type="text" name="name" class="form-control">
+    						<input type="text" name="name" value="<?php echo $record['name'] ?>" class="form-control">
     					</div>
     				</div>
     				<div class="form-group row">
     					<label class="col-sm-2 col-form-label">Gender</label>
     					<div class="col-sm-10">
     						<select name="gender" class="form-control">
+                                <option><?php echo $record['gender'] ?> </option>
     							<option value="">-- Choose --</option>
     							<option value="male">Male</option>
     							<option value="female">female</option>
@@ -55,15 +57,15 @@
     				<div class="form-group row">
     					<label class="col-sm-2 col-form-label">Address</label>
     					<div class="col-sm-10">
-    						<textarea name="address" class="form-control"></textarea>
+    						<textarea name="address" class="form-control"><?php echo $record['address'] ?></textarea>
     					</div>
     				</div>
     				<hr>
     				<div class="form-group row">
     					<div class="col-sm-10">
     						<label class="col-sm-2 col-form-label"> </label>
-    						<button type="button" name="submit" class="btn btn-sm btn-primary"> Update</button>
-    						<?php echo anchor('mahasiswa','Cancel',array('class'=>'btn btn-sm btn-danger'))?>
+    						<button type="submit" name="submit" class="btn btn-sm btn-primary"> Update</button>
+    						<a href="<?php echo base_url();?>index.php/mahasiswa" class="btn btn-sm btn-danger"> Cancel</a>
     					</div>
     				</div>
     			</form>

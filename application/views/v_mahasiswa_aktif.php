@@ -21,49 +21,47 @@
 		</div>
 	</nav>
 
-	<!-- area table mahasiswa -->
+    <!-- area table mahasiswa -->
 	<div class="row">
 		<div class="container">
 			<div class="col-sm-12 col-md-12 col-lg-12">
-				<table class="table table-bordered table-striped mt-3">
-					<h2>Data all Mahasiswa</h2>
-					<a href="<?php echo base_url();?>index.php/mahasiswa/mahasiswa_aktif" class="btn btn-sm btn-success">Mahasiswa aktif</a>&nbsp;
-					<a href="<?php echo base_url();?>index.php/mahasiswa/new" class="btn btn-sm btn-primary">Add new</a>
-					<thead>
-						<tr>
-							<th>#</th>
-							<th>Nim</th>
-							<th>Name</th>
-							<th>Gender</th>
-							<th>Address</th>
-							<th>Status</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-						<?php 
-						$no=1;
-						foreach ($record->result() as $r) {
-							echo "
+					<table class="table table-bordered table-striped mt-3">
+						<h2>Data Mahasiswa</h2>
+						<a href="<?php echo base_url();?>index.php/mahasiswa" class="btn btn-sm btn-success">All Mahasiswa</a>     &nbsp;
+						<a href="<?php echo base_url();?>index.php/mahasiswa/new" class="btn btn-sm btn-primary">Add new</a>
+						<thead>
 							<tr>
-							<td>$no</td>
-							<td>$r->nim</td>
-							<td>$r->name</td>
-							<td>$r->gender</td>
-							<td>$r->address</td>
-							<td>$r->status</td>
-							<td>".anchor('mahasiswa/edit/'.$r->mahasiswa_id,'<i class="btn btn-sm btn-primary"> Edit</i>')."
-							".anchor('mahasiswa/delete/'.$r->mahasiswa_id,'<i class="btn btn-sm btn-danger"> Delete</i>')."
-							</td>
-							</tr>";
-							$no++;
+								<th scope="col">#</th>
+								<th scope="col">Nim</th>
+								<th scope="col">Name</th>
+								<th scope="col">Gender</th>
+								<th scope="col">Address</th>
+								<th scope="col">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+								<?php 
+								$no=1;
+								foreach ($record->result() as $r) {
+									echo "
+									<tr>
+									<td>$no</td>
+									<td>$r->nim</td>
+									<td>$r->name</td>
+									<td>$r->gender</td>
+									<td>$r->address</td>
+									<td>".anchor('mahasiswa/edit/'.$r->mahasiswa_id,'<i class="btn btn-sm btn-primary"> Edit</i>')."
+									    ".anchor('mahasiswa/delete/'.$r->mahasiswa_id,'<i class="btn btn-sm btn-danger"> Delete</i>')."
+									</td>
+									</tr>";
+									$no++;
 
-						}
-						?>
-						
-					</tbody>
-				</table>	
+								}
+								?>
+							
+						</tbody>
+					</table>	
 			</div>
 		</div>
 	</div>
